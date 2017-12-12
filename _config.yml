@@ -1,6 +1,6 @@
 # Site settings
-title: "Daniel Ribeiro - MCP | MCSA | MTAC"
-email: danielribeiro95@outlook.com.br
+title: "Daniel Ribeiro - MCSA | MTAC"
+email: xdanielribeiro@outlook.com.br
 description: "A dark blog theme for Jekyll."
 baseurl: ""
 url: "http://carte-noire.jacobtomlinson.co.uk/"
@@ -16,8 +16,8 @@ post_limit: 5
 # Social usernames/URLs
 twitter_username: danieiribeiro
 github_username:  xdanielribeiro
-instagram_username: 
-reddit_username: 
+instagram_username:xdanielribeiro
+#reddit_username: 
 linkedin_link: https://www.linkedin.com/in/xdanielribeiro/
 #google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
 #stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
@@ -25,7 +25,7 @@ linkedin_link: https://www.linkedin.com/in/xdanielribeiro/
 facebook_link: https://www.facebook.com/xDanielRibeiro
 
 # Footer
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
+#ooter_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/danieiribeiro\">Daniel Ribeiro</a>"
 footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings
