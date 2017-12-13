@@ -44,6 +44,6 @@ _testeeee asda_
 
 Veja a imagem abaixo:
     
-![Ferramenta de Cap]({{site.baseurl}}/https://drive.google.com/open?id=1RRRqS91wPoA6n0OTFtMHOBh_zs2sUBbD)
+![Ferramenta de Cap]({{site.baseurl}}/https://i.imgur.com/M4iCsUS.jpg)
 [Imgur](https://i.imgur.com/M4iCsUS.jpg)
 
