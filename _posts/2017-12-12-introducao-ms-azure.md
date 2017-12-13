@@ -27,10 +27,12 @@ O Azure possui uma interface web que nos permite administrar e gerenciar pratica
 Imagine um console único de fácil utilização, que além de simplificar o processo de implementação e o gerenciamento dos recursos em nuvem, também fornece a possibilidade de personalizar seu portal de acordo com as suas necessidades, por exemplo:
 
 - Criar dashboards;
-- Compartilhar dashboards;
+- Depois de criado, você pode compartilhar os dashboards com seus colegas de equipe;
 - Inserir nomes de acordo com o seu propósito.
 
 Veja aqui um dashboard com algumas customizações
+
+![AzureDashboard](https://i.imgur.com/cL4gxZY.png)
 
 ## Grupo de Recursos
 
