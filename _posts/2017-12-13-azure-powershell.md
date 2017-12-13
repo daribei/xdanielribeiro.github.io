@@ -57,4 +57,5 @@ Para vizualisar se o Grupo de Recursos foi criado, executamos:
 PS C:\> Get-AzureRmResourceGroup -Location $location
 ```
 
+Seguindo, agora vamos utilizar o cmdlets __Get-Credential__ 
 
