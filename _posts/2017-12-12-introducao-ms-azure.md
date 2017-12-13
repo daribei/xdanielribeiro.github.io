@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introdução ao Microsoft Azure
-date: 2017-12-12T12:31:19.000Z
+date: {}
 summary: See what the different elements looks like.
 categories: azure
 thumbnail: cogs
@@ -42,8 +42,5 @@ _testeeee asda_
 
 [Microsoft](https://www.microsoft.com "powerpoint")
 
-Veja a imagem abaixo:
-    
-![Ferramenta de Cap]({{site.baseurl}}/https://i.imgur.com/M4iCsUS.jpg)
-[Imgur](https://i.imgur.com/M4iCsUS.jpg)
+![Thumper](https://i.imgur.com/M4iCsUS.jpg)
 
