@@ -3,7 +3,7 @@ layout: post
 title: Introdução ao Microsoft Azure
 date: 2017-12-13 15:31:19
 categories: azure
-thumbnail: cogs
+thumbnail: intazure
 tags:
   - azure
   - cloud
