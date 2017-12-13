@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Introdu√√o ao Microsoft Azure
-date:       2017-12-12 22:48:19
+date:       2017-12-12 10:48:19
 summary:    See what the different elements looks like.
 categories: Azure
 thumbnail: cogs
