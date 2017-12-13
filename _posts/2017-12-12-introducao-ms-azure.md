@@ -44,5 +44,6 @@ _testeeee asda_
 
 Veja a imagem abaixo:
     
-![ferramenta de captura]({{site.baseurl}}/_posts/Capture.JPG)
+![Ferramenta de Cap]({{site.baseurl}}/https://drive.google.com/open?id=1RRRqS91wPoA6n0OTFtMHOBh_zs2sUBbD)
+[Imgur](https://i.imgur.com/M4iCsUS.jpg)
 
