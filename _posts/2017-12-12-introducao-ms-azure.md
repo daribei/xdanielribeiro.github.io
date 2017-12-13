@@ -28,7 +28,7 @@ Imagine um console único de fácil utilização, que além de simplificar o pro
 
     - Criar vários dashboards;
     - Inserir nomes de acordo com o seu propósito;
-   -  Compartilhar os dashboards.
+    -  Compartilhar os dashboards.
 
 Veja aqui um dashboard com algumas customizações
 
