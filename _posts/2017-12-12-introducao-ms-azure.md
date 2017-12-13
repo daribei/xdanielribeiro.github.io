@@ -42,8 +42,7 @@ _testeeee asda_
 
 [Microsoft](https://www.microsoft.com "powerpoint")
 
-
-	Veja a imagem abaixo:
+Veja a imagem abaixo:
     
-    ![ferramenta de captura]({{site.baseurl}}/_posts/Capture.JPG)
+![ferramenta de captura]({{site.baseurl}}/_posts/Capture.JPG)
 
