@@ -13,6 +13,7 @@ published: true
 ## Introdução
 
 Seja muito bem vindo ao meu blog.
+
 O tema de hoje é __segura minha cerveja enquanto eu provisiono teu ambiente__. É isso mesmo, rsrs.
 Nos dias de hoje é perceptível uma tendencia muito grande em relação a utilização de linha de comando, onde cada vez **menos** será utilizado interface gráfica.
 
