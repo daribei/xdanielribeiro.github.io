@@ -7,7 +7,7 @@ thumbnail: intazure
 tags:
   - azure
   - powershell
-published: false
+published: true
 ---
 
 ## Introdução
