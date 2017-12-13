@@ -21,7 +21,7 @@ Eu particularmente prefiro o PowerShell.
 
 O objetivo desse artigo é provisionar um ambiente no Azure através do PowerShell.
 
-## Mãos a Obra
+### Mãos a Obra
 
 Antes de mais nada, é necessário [instalar](https://docs.microsoft.com/pt-br/powershell/azure/install-azurerm-ps?view=azurermps-5.0.0 "instalar") o módulo do Azure PowerShell na sua máquina, ou se preferir, é possível utilizar o seu navegador com o Azure [CloudShell](https://docs.microsoft.com/pt-br/azure/cloud-shell/overview "CloudShell").
 
@@ -33,14 +33,12 @@ Basicamente:
 - Conta de armazenamento;
 - Firewall.
 
-Some basic Git commands are:
+O primeiro passo é definir algumas váriaveis que serão utilizadas no decorrer da implementação.
+
 ```
-git status
-git add
-git commit
+PS C:\> $resourceGroupName = "GR-DanielRibeiro"
+PS C:\> $location = "Brazil_South"
+PS C:\> $vmName = "Azure-Lab-DanielRibeiro"
 ```
-
-
-
 
 
