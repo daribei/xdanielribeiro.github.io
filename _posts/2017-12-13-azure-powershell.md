@@ -46,4 +46,4 @@ PS C:\> $vmName = "Azure-Lab-DanielRibeiro"
 Feito isso, já podemos começar a brincar um pouquinho.
 
 Vamos começar criando o grupo de recursos, lembra que sem ele nós não conseguimos nem dar o primeiro passo.
-No meu artigo de [introdução ao Azure](http://xdanielribeiro.com.br/azure/2017/12/13/introducao-ms-azure/ "introdução-ao-Azure") eu falo sobre isso.
+No meu artigo de [introdução ao Azure](http://xdanielribeiro.com.br/azure/2017/12/13/introducao-ms-azure/ "Introdução ao Microsoft Azure") eu falo sobre isso.
