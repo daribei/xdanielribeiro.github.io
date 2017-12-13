@@ -33,7 +33,8 @@ Basicamente:
 - Conta de armazenamento;
 - Firewall.
 
-### O primeiro passo é definir algumas váriaveis que serão utilizadas no decorrer da implementação.
+O primeiro passo é definir algumas váriaveis que serão utilizadas no decorrer da implementação.
+Vamos nessa?
 
 ```
 PS C:\> $resourceGroupName = "GR-DanielRibeiro"
