@@ -1,16 +1,17 @@
 ---
-layout:     post
-title:      Introducao
-date:       2017-12-12 11:31:19
-summary:    See what the different elements looks like.
+layout: post
+title: Introducao
+date: {}
+summary: See what the different elements looks like.
 categories: azure
 thumbnail: cogs
 tags:
- - azure
- - cloud
+  - azure
+  - cloud
+published: true
 ---
 
-# Introdução
+## Introdução
 
 Diante dos avanços tecnológicos que inserem diversos desafios no nosso dia-a-dia, é preciso estar de olho nas mudanças tecnológicas, antes mesmo de sua consolidação no mercado.
 
@@ -26,10 +27,24 @@ O Azure possui uma interface web que nos permite administrar e gerenciar pratica
 
 Imagine um console único de fácil utilização, que além de simplificar o processo de implementação e o gerenciamento dos recursos em nuvem, também fornece a possibilidade de personalizar seu portal de acordo com as suas necessidades, por exemplo:
 
-    - Criar vários dashboards;
-    - Inserir nomes de acordo com o seu propósito;
-    -  Compartilhar os dashboards.
+    - _Criar_ vários dashboards;
+    - _Inserir nomes_ **de acordo com o seu propósito**;
+    - Compartilhar os dashboards.
 
 Veja aqui um dashboard com algumas customizações
 
-![Thumper](https://i.imgur.com/I3DD9ap.jpg)
+****teste
+_teste aqui_ teste__teste
+****teste
+
+asdsadsad ad
+
+****teste adfsd asd asd a** asfdsfafa
+_testeeee asda_
+
+![Teste]({{site.baseurl}}/_posts/whois.JPG)
+
+-
+-
+1.
+
