@@ -145,7 +145,7 @@ Conclusão
 
 É perceptível o crescimento acelerado da computação em nuvem, mas você já está preparado para encarar essa tecnologia que vem dominando o mercado?
 
-A Microsoft disponibiliza $200 de créditos gratuitos no Azure! Com isso você pode provisionar máquinas virtuais, bancos de dados, enfim, o que você quiser!
+A Microsoft disponibiliza R$670 de créditos gratuitos no Azure! Com isso você pode provisionar máquinas virtuais, bancos de dados, enfim, o que você quiser!
 
 Vale lembrar ainda que existem diversos serviços que podem ser utilizados gratuitamente, independente do tipo de assinatura.
 
