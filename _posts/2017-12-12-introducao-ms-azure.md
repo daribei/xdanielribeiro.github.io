@@ -42,6 +42,7 @@ Um grupo de recursos (_Resource Group_) nada mais é do que um contêiner que ma
 
 É importantíssimo ressaltar alguns fatores que devem ser levados em consideração no momento de definir um GR:
 
+- Deletando um GR automaticamente irá deletar todos os recursos contigos nele;
 - Todo e qualquer recurso só pode existir em um GR, ou seja, não é possível provisionar nenhum recurso se o mesmo não fizer parte de um GR;
 - Um GR pode conter recursos de regiões diferentes;
 - É possível mover um recurso para um novo GR.
@@ -54,9 +55,7 @@ Esse é um dos recursos do Azure que eu pretendo escrever um artigo especifico f
 
 Mas o que é de fato uma conta de armazenamento?
 
-Bem, basicamente uma conta de armazenamento é um namespace exclusivo, onde são armazenados objetos de dados.
-
-Ficou confuso? Então dá uma olhada na imagem abaixo que ela vai te ajudar a colocar as ideias no lugar
+Bem, basicamente uma conta de armazenamento pode ser usada para armazenamento de blobs, tabelas, filas e arquivos de forma segura, redundante e altamente disponível.
 
 O Azure atualmente possui 4 tipos de armazenamentos:
 
@@ -72,19 +71,19 @@ E como fica a redundância dos meus dados armazenados no Azure?
 
 O Azure possui 4 esquemas de replicação que determinam quantas cópias dos dados serão mantidas no mesmo datacenter ou em um segundo datacenter, essa decisão vai depender da opção de replicação que você vai escolher no momento de criar a conta de armazenamento. Atualmente as opções possíveis são:
 
-- Armazenamento com redundância local (LRS): armazena 3 cópias dos seus arquivos dentro do mesmo datacenter;
+- Armazenamento com redundância local (**L**RS): armazena 3 cópias dos seus arquivos dentro do mesmo datacenter;
 
-- Armazenamento com redundância de zona (ZRS): replica os dados entre datacenters de uma ou duas regiões, além de armazenar 3 réplicas dos seus arquivos, semelhante ao LRS;
+- Armazenamento com redundância de zona (**Z**RS): replica os dados entre datacenters de uma ou duas regiões, além de armazenar 3 réplicas dos seus arquivos, semelhante ao LRS;
 
-- Armazenamento com redundância geográfica (GRS): replica 3 cópias dos dados dentro do mesmo datacenter (LRS), além de replicar para outro datacenter a milhares de quilômetros;
+- Armazenamento com redundância geográfica (**G**RS): replica 3 cópias dos dados dentro do mesmo datacenter (LRS), além de replicar para outro datacenter a milhares de quilômetros;
 
-- Armazenamento com redundância geográfica com acesso de leitura (RA-GRS): Idem ao GRS, porém, com acesso de leitura no datacenter secundário.
+- Armazenamento com redundância geográfica com acesso de leitura (**RA**-**GRS**): Idem ao GRS, porém, com acesso de leitura no datacenter secundário.
 
 Bom, eu poderia continuar escrevendo por horas sobre os conceitos e funcionalidades do armazenamento do Azure, mas isso é assunto para outra hora.
 
 ## Web Apps
 
-O serviço de Web Apps do Azure consiste na hospedagem de aplicativos web ou sites.
+O serviço de Web Apps do Azure consiste na hospedagem de aplicativos web.
 
 Os recursos podem estar sendo executados em máquinas virtuais compartilhadas ou dedicadas, isso vai depender da sua escolha no momento de provisionar o serviço.
 
@@ -143,7 +142,8 @@ O que eu posso proteger com o backup do Azure?
 Não, fique tranquilo! Você pode proteger seu ambiente local com a solução de backup do Azure.
 
 Em breve iremos discutir com detalhes o backup do Azure e as formas de implementação.
-Conclusão
+
+## Conclusão
 
 É perceptível o crescimento acelerado da computação em nuvem, mas você já está preparado para encarar essa tecnologia que vem dominando o mercado?
 
@@ -152,6 +152,3 @@ A Microsoft disponibiliza R$670 de créditos gratuitos no Azure! Com isso você 
 Vale lembrar ainda que existem diversos serviços que podem ser utilizados gratuitamente, independente do tipo de assinatura.
 
 Ficou interessado? Então dá uma olhada nesse [link](https://azure.microsoft.com/pt-br/free/ "link").
-
-![Thumper](https://i.imgur.com/M4iCsUS.jpg)
-
