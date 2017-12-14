@@ -7,7 +7,7 @@ thumbnail: intazure
 tags:
   - azure
   - powershell
-published: true
+published: false
 ---
 
 ## Introdução
@@ -63,5 +63,5 @@ Para vizualisar se o Grupo de Recursos foi criado, executamos:
 PS C:\> Get-AzureRmResourceGroup -Location $location
 ```
 
-Seguindo, agora vamos utilizar o cmdlets __Get-Credential__ testeeee
+Seguindo, agora vamos utilizar o cmdlets __Get-Credential__ testeeee2
 
