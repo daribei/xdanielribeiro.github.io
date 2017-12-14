@@ -7,7 +7,7 @@ thumbnail: intazure
 tags:
   - azure
   - powershell
-published: true
+published: false
 ---
 
 ## Introdução
@@ -35,7 +35,6 @@ Se fossemos provisionar uma VM no Azure, quais recursos seriam necessários para
 Basicamente:
 - Rede Virtual;
 - Interface de rede;
-- Conta de armazenamento;
 - Firewall.
 - IP Público (opcional);
 
