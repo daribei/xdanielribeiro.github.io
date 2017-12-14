@@ -7,7 +7,7 @@ thumbnail: intazure
 tags:
   - azure
   - powershell
-published: false
+published: true
 ---
 
 ## Introdução
@@ -26,7 +26,7 @@ Lembrando que a Microsoft também disponibiliza o Azure CLI, outra ferramenta de
 
 O objetivo desse artigo é provisionar um ambiente no Azure através do PowerShell.
 
-### Mãos a Obra
+## Mãos a Obra
 
 Antes de mais nada, é necessário [instalar](https://docs.microsoft.com/pt-br/powershell/azure/install-azurerm-ps?view=azurermps-5.0.0 "instalar") o módulo do Azure PowerShell na sua máquina, ou se preferir, é possível utilizar o seu navegador com o Azure [CloudShell (assunto do próximo artigo)](https://docs.microsoft.com/pt-br/azure/cloud-shell/overview "CloudShell").
 
@@ -44,13 +44,13 @@ Vamos nessa?
 
 ```
 PS C:\> $resourceGroupName = "GR-DanielRibeiro"
-PS C:\> $location = "Brazil_South"
+PS C:\> $location = "brazilsouth"
 PS C:\> $vmName = "Azure-Lab-DanielRibeiro"
 ```
 
 Feito isso, já podemos começar a brincadeira.
 
-Vamos começar realizando o __login__ e em seguida vamos criar um grupo de recursos, lembre-se que sem ele nós não conseguimos nem dar o primeiro passo.
+Vamos começar efetuando o __login__ e em seguida vamos criar um grupo de recursos. Lembre-se que sem ele nós não conseguimos nem dar o primeiro passo.
 No meu artigo de [introdução ao Azure](http://xdanielribeiro.com.br/azure/2017/12/13/introducao-ms-azure/ "Introdução ao Microsoft Azure") eu falo sobre isso.
 
 ```
@@ -63,5 +63,107 @@ Para vizualisar se o Grupo de Recursos foi criado, executamos:
 PS C:\> Get-AzureRmResourceGroup -Location $location
 ```
 
-Seguindo, agora vamos utilizar o cmdlets __Get-Credential__ testeeee2
+Seguindo, agora vamos utilizar o cmdlet __Get-Credential__ para criar um objeto contendo o usuário e senha da VM. 
+
+```
+PS C:\> $credenciais = Get-Credential -Message "Insira o usuário e senha para a máquina virtual"
+```
+Após executar o comando, abrirá um prompt solicitando as informações.
+
+
+![AzureCredentials](https://i.imgur.com/TpjcDp3.jpg)
+
+
+Não se preocupe, sua senha não ficará exposta dentro da variável $credenciais.
+
+Continuando, vamos criar uma rede virtual e uma sub-rede. Para ilustrar melhor o cenário, vamos imaginar que a nossa rede virtual terá um bloco CIDR **172.16.0.0/16** e a sub-rede terá um bloco CIDR **172.16.1.0/24**.
+
+### Criando a Rede Virtual:
+
+```
+PS C:\> $vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroupName -Name "VNet-DanielRibeiro" `
+-AddressPrefix 172.16.0.0/16 -Location $location
+```
+
+### Criando a Sub-Rede e adicionando na Rede Virtual:
+ 
+```
+PS C:\> Add-AzureRmVirtualNetworkSubnetConfig -Name "Subnet-Producao" -VirtualNetwork $vnet -AddressPrefix 172.16.1.0/24
+```
+
+Saída esperada:
+
+```
+Name                   : VNet-DanielRibeiro
+ResourceGroupName      : GR-DanielRibeiro
+Location               : brazilsouth
+Id                     : /subscriptions/50e187c6-50e1-187c-31e1-1018329a22f1/resourceGroups/GR-DanielRibeiro/providers/
+                         Microsoft.Network/virtualNetworks/VNet-DanielRibeiro
+Etag                   : W/"675bab22-nh1c-472f-a1tc-cfb25630879n"
+ResourceGuid           : ec7345d9-a5e4-4ca0-bb11-eb2b6e895129
+ProvisioningState      : Succeeded
+Tags                   :
+AddressSpace           : {
+                           "AddressPrefixes": [
+                             "172.16.0.0/16"
+                           ]
+                         }
+DhcpOptions            : {}
+Subnets                : [
+                           {
+                             "Name": "Subnet-Producao",
+                             "AddressPrefix": "172.16.1.0/24"
+                           }
+                         ]
+VirtualNetworkPeerings : []
+EnableDDoSProtection   : false
+EnableVmProtection     : false
+```
+
+Embora a saída acima nos mostre que a sub-rede já está criada, ela existe apenas na variável local usada para armazenar o objeto da VNet (*$vnet*). Para salvar as configurações, é necessário executar o comando: 
+
+```
+PS C:\> Set-AzureRmVirtualNetwork -VirtualNetwork $vnet
+```
+
+Pronto! Já temos nossa VNet criada e também a nossa sub-rede. No próximo passo vamos criar um IP Público, embora este recurso seja opcional, neste caso.
+
+```
+PS C:\> $publicIP = New-AzureRmPublicIpAddress -Name "DrPublicIP" -ResourceGroupName $resourceGroupName `
+-Location $location -AllocationMethod Dynamic -DomainNameLabel "danriblab"
+```
+
+Note que foi utilizado o parâmetro **-DomainNameLabel**, esse cara é utilizado para definir um nome DNS para o nosso IP Público, neste caso: danriblab.brazilsouth.cloudapp.azure.com.
+
+Já estamos na metade do caminho. Criamos o Grupo de Recursos, a Rede Virtual, Sub-Rede e o IP Público.
+
+No próximo passo, vamos criar um Grupo de Segurança de Rede (NSG), também conhecido como Firewall.
+
+Primeiramente, vamos criar o NSG:
+
+```
+PS C:\> $nsg = New-AzureRmNetworkSecurityGroup -Name "NSG-DanielRibeiroLab" -ResourceGroupName $resourceGroupName -Location $location
+```
+
+Em seguida vamos criar uma regra, liberando o acesso remoto na VM:
+
+```
+PS C:\> Add-AzureRmNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg `
+-Name Libera-RDP `
+-Description "Libera RDP para internet" `
+-Access Allow `
+-Protocol Tcp `
+-Direction Inbound `
+-Priority 100 `
+-SourceAddressPrefix * `
+-SourcePortRange * `
+-DestinationAddressPrefix * `
+-DestinationPortRange 3389
+```
+
+Por último vamos salvar as configurações:
+
+```
+PS C:\> Set-AzureRmNetworkSecurityGroup -NetworkSecurityGroup $nsg
+```
 
