@@ -201,9 +201,10 @@ Automatizar tarefas de infraestrutura é o ponto chave do DevOps. Alguns prefere
 
 Escrever scripts para automatizar tarefas manuais que os times de infraestrutura e operações executam manualmente é uma das grandes sacadas do DevOps.
 
-
-
 A mensagem que eu queria deixar pra vocês é a seguinte: **aprendam** CLI! A tendência é cada vez menos utilizarmos interface gráfica.
+
+O script está disponível no meu [GitHub](https://github.com/xdanielribeiro/azurepowershell/blob/master/CreateVirtualMachineFromAzurePowerShell.ps1).
+
 
 Obrigado,
 
