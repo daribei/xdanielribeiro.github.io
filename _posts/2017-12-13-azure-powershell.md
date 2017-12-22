@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Azure PowerShell - Simples, rápido e fácil*
+title: Provisionando uma VM com o Azure PowerShell
 date: 2017-12-13 16:41:19
 categories: azure
 thumbnail: intazure
 tags:
   - azure
   - powershell
-published: false
+published: true
 ---
 
 ## Introdução
@@ -16,13 +16,13 @@ Seja muito bem vindo ao meu blog.
 
 O tema de hoje é __segura minha cerveja enquanto eu provisiono teu ambiente__. É isso mesmo, rsrs.
 
-Bom pessoal, existe uma tendência muito grande em relação ao futuro. Muito se fala que cada vez **menos** será utilizado interface gráfica para realizar as atividades cotidianas.
+Bom pessoal, existe uma tendência muito grande em relação a utilização de CLI no futuro. Muito se fala que cada vez **menos** será utilizado interface gráfica para realizar as atividades cotidianas.
 
 Tendo isso em vista, devemos desde já, nos preparar e utilizar ferramentas de linha de comando no nosso dia a dia.
 
 O Azure possuiu duas grandes ferramentas de linha de comando, afinal, um grande provedor de núvem precisa de excelentes ferramentas e é por isso que eu vou apresentar alguns comandos básicos do Azure PowerShell. 
 
-Lembrando que a Microsoft também disponibiliza o Azure CLI, outra ferramenta de linha de comando espetacular!
+Lembrando que a Microsoft também disponibiliza o Azure CLI, outra ferramenta de linha de comando espetacular, compatível com macOS, Linux e Windows.
 
 O objetivo desse artigo é provisionar um ambiente no Azure através do PowerShell.
 
@@ -42,30 +42,30 @@ O primeiro passo é definir algumas váriaveis que serão utilizadas no decorrer
 Vamos nessa?
 
 ```
-PS C:\> $resourceGroupName = "GR-DanielRibeiro"
-PS C:\> $location = "brazilsouth"
-PS C:\> $vmName = "Azure-Lab-DanielRibeiro"
+$resourceGroupName = "GR-DanielRibeiro"
+$location = "brazilsouth"
+$vmName = "Lab-DanielRib"
 ```
 
-Feito isso, já podemos começar a brincadeira.
+Feito isso, já podemos iniciar a brincadeira.
 
 Vamos começar efetuando o __login__ e em seguida vamos criar um grupo de recursos. Lembre-se que sem ele nós não conseguimos nem dar o primeiro passo.
 No meu artigo de [introdução ao Azure](http://xdanielribeiro.com.br/azure/2017/12/13/introducao-ms-azure/ "Introdução ao Microsoft Azure") eu falo sobre isso.
 
 ```
-PS C:\> Login-AzureRmAccount
-PS C:\> New-AzureRmResourceGroup -Name $resourceGroupName -Location $location
+Login-AzureRmAccount
+New-AzureRmResourceGroup -Name $resourceGroupName -Location $location
 ```
 
 Para vizualisar se o Grupo de Recursos foi criado, executamos:
 ```
-PS C:\> Get-AzureRmResourceGroup -Location $location
+Get-AzureRmResourceGroup -Location $location
 ```
 
 Seguindo, agora vamos utilizar o cmdlet __Get-Credential__ para criar um objeto contendo o usuário e senha da VM. 
 
 ```
-PS C:\> $credenciais = Get-Credential -Message "Insira o usuário e senha para a máquina virtual"
+$credenciais = Get-Credential -Message "Insira o usuário e senha para a máquina virtual"
 ```
 Após executar o comando, abrirá um prompt solicitando as informações.
 
@@ -77,58 +77,23 @@ Não se preocupe, sua senha não ficará exposta dentro da variável $credenciai
 
 Continuando, vamos criar uma rede virtual e uma sub-rede. Para ilustrar melhor o cenário, vamos imaginar que a nossa rede virtual terá um bloco CIDR **172.16.0.0/16** e a sub-rede terá um bloco CIDR **172.16.1.0/24**.
 
-### Criando a Rede Virtual:
+### Criando a configuração da Sub-Rede:
 
 ```
-PS C:\> $vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroupName -Name "VNet-DanielRibeiro" `
--AddressPrefix 172.16.0.0/16 -Location $location
+$subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name "Subnet-Producao" -AddressPrefix 172.16.1.0/24
 ```
 
-### Criando a Sub-Rede e adicionando na Rede Virtual:
+### Criando a Rede Virtual e associando a sub-rede:
  
 ```
-PS C:\> Add-AzureRmVirtualNetworkSubnetConfig -Name "Subnet-Producao" -VirtualNetwork $vnet -AddressPrefix 172.16.1.0/24
-```
-
-Saída esperada:
-
-```
-Name                   : VNet-DanielRibeiro
-ResourceGroupName      : GR-DanielRibeiro
-Location               : brazilsouth
-Id                     : /subscriptions/50e187c6-50e1-187c-31e1-1018329a22f1/resourceGroups/GR-DanielRibeiro/providers/
-                         Microsoft.Network/virtualNetworks/VNet-DanielRibeiro
-Etag                   : W/"675bab22-nh1c-472f-a1tc-cfb25630879n"
-ResourceGuid           : ec7345d9-a5e4-4ca0-bb11-eb2b6e895129
-ProvisioningState      : Succeeded
-Tags                   :
-AddressSpace           : {
-                           "AddressPrefixes": [
-                             "172.16.0.0/16"
-                           ]
-                         }
-DhcpOptions            : {}
-Subnets                : [
-                           {
-                             "Name": "Subnet-Producao",
-                             "AddressPrefix": "172.16.1.0/24"
-                           }
-                         ]
-VirtualNetworkPeerings : []
-EnableDDoSProtection   : false
-EnableVmProtection     : false
-```
-
-Embora a saída acima nos mostre que a sub-rede já está criada, ela existe apenas na variável local usada para armazenar o objeto da VNet (*$vnet*). Para salvar as configurações, é necessário executar o comando: 
-
-```
-PS C:\> Set-AzureRmVirtualNetwork -VirtualNetwork $vnet
+$vnet = New-AzureRmVirtualNetwork -ResourceGroupName $resourceGroupName -Location $location `
+-Name VNet-DanielRibeiro -AddressPrefix 172.16.0.0/16 -Subnet $subnetConfig
 ```
 
 Pronto! Já temos nossa VNet criada e também a nossa sub-rede. No próximo passo vamos criar um IP Público, embora este recurso seja opcional, neste caso.
 
 ```
-PS C:\> $publicIP = New-AzureRmPublicIpAddress -Name "DrPublicIP" -ResourceGroupName $resourceGroupName `
+$publicIP = New-AzureRmPublicIpAddress -Name "DrPublicIP" -ResourceGroupName $resourceGroupName `
 -Location $location -AllocationMethod Dynamic -DomainNameLabel "danriblab"
 ```
 
@@ -141,13 +106,13 @@ No próximo passo, vamos criar um Grupo de Segurança de Rede (NSG), também con
 Primeiramente, vamos criar o NSG:
 
 ```
-PS C:\> $nsg = New-AzureRmNetworkSecurityGroup -Name "NSG-DanielRibeiroLab" -ResourceGroupName $resourceGroupName -Location $location
+$nsg = New-AzureRmNetworkSecurityGroup -Name "NSG-DanielRibeiroLab" -ResourceGroupName $resourceGroupName -Location $location
 ```
 
 Em seguida vamos criar uma regra, liberando o acesso remoto na VM:
 
 ```
-PS C:\> Add-AzureRmNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg `
+Add-AzureRmNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg `
 -Name Libera-RDP `
 -Description "Libera RDP para internet" `
 -Access Allow `
@@ -163,6 +128,84 @@ PS C:\> Add-AzureRmNetworkSecurityRuleConfig -NetworkSecurityGroup $nsg `
 Por último vamos salvar as configurações:
 
 ```
-PS C:\> Set-AzureRmNetworkSecurityGroup -NetworkSecurityGroup $nsg
+Set-AzureRmNetworkSecurityGroup -NetworkSecurityGroup $nsg
 ```
+
+Agora que possuímos um IP público e um Grupo de Segurança da Rede (NSG), vamos criar uma interface de rede e associá-la ao NSG e também ao IP Público.
+
+```
+$nic = New-AzureRmNetworkInterface -Name ($vmName.ToLower()+'_nic') -ResourceGroupName $resourceGroupName -Location $location `
+-SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIP.Id -NetworkSecurityGroupId $nsg.Id
+```
+
+Pronto, já temos todos os recursos necessários para provisionar uma VM! O último passo é de fato a criação da máquina virtual.
+
+Iniciamos definindo o nome da VM e o tamanho da mesma:
+
+```
+$vm = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D2_v2_Promo
+```
+
+Como podemos descobrir o tamanho das instâncias disponíveis na nossa região?
+
+Simples:
+
+```
+Get-AzureRmVmSize -location $location
+```
+
+Em seguida, setamos algumas informações referentes ao sistema operacional:
+
+```
+$vm = Set-AzureRmVMOperatingSystem `
+    -VM $vm `
+    -Windows `
+    -ComputerName $vmName `
+    -Credential $credenciais
+```
+
+Definimos a imagem que será utilizada para provisionar a VM:
+
+```
+$vm = Set-AzureRmVMSourceImage `
+    -VM $vm `
+    -PublisherName MicrosoftWindowsServer `
+    -Offer WindowsServer `
+    -Skus 2016-Datacenter `
+    -Version latest
+```
+
+Adicionamos na VM a interface de rede criada anteriormente:
+
+```
+$vm = Add-AzureRmVMNetworkInterface -VM $vm -Id $nic.Id
+```
+
+Inserimos as informações do disco do Sistema Operacional da VM:
+
+```
+$vm = Set-AzureRmVMOSDisk `
+    -VM $vm `
+    -Name "OSDisk" `
+    -DiskSizeInGB 128 `
+    -CreateOption FromImage
+```
+Por último, executamos o cmdlet para criar a VM:
+
+```
+New-AzureRmVM -VM $vm -ResourceGroupName $resourceGroupName -Location $location
+```
+## Conclusão
+
+Automatizar tarefas de infraestrutura é o ponto chave do DevOps. Alguns preferem chamar isso de Infraestrutura como código (IaC). 
+
+Escrever scripts para automatizar tarefas manuais que os times de infraestrutura e operações executam manualmente é uma das grandes sacadas do DevOps.
+
+
+
+A mensagem que eu queria deixar pra vocês é a seguinte: **aprendam** CLI! A tendência é cada vez menos utilizarmos interface gráfica.
+
+Obrigado,
+
+### Daniel Ribeiro.
 
