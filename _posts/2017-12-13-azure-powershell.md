@@ -56,7 +56,6 @@ No meu artigo de [introdução ao Azure](http://xdanielribeiro.com.br/azure/2017
 Login-AzureRmAccount
 New-AzureRmResourceGroup -Name $resourceGroupName -Location $location
 ```
-[![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](https://shell.azure.com)
 
 Para vizualisar se o Grupo de Recursos foi criado, executamos:
 ```
@@ -196,6 +195,9 @@ Por último, executamos o cmdlet para criar a VM:
 ```
 New-AzureRmVM -VM $vm -ResourceGroupName $resourceGroupName -Location $location
 ```
+
+[![Launch Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "Launch Cloud Shell")](shell.azure.com/powershell)
+
 ## Conclusão
 
 Automatizar tarefas de infraestrutura é o ponto chave do DevOps. Alguns preferem chamar isso de Infraestrutura como código (IaC). 
