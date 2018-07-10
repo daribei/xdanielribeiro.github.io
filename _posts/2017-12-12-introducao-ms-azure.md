@@ -96,7 +96,7 @@ E como fica a segurança do meu aplicativo ou do meu site hospedado no Azure?
 Aqui você pode ficar tranquilo! O serviço de Web Apps do Azure está em conformidade com diversas normas de segurança, incluindo ISO-27001, SOC1, SOC2 e SOC3.
 
 
-## Máquinas Virtuais (VM)
+## Máquinas Virtuais
 
 As máquinas virtuais são um dos principais recursos oferecidos pelo Azure.
 
