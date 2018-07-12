@@ -5,7 +5,7 @@ menu:
   Categories: categories
   Tags: tags
   About: about
-
+theme: icarus
 # Customize
 customize:
     logo:
