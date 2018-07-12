@@ -1,0 +1,41 @@
+# Site settings
+title: "Daniel Ribeiro - MTAC"
+email: xdanielribeiro@outlook.com.br
+#description: "A dark blog theme for Jekyll."
+description: "Compartilhando conhecimento..."
+#baseurl: "http://xdanielribeiro.com.br"
+#url: "http://carte-noire.jacobtomlinson.co.uk/"
+timezone: "America/Sao_Paulo"
+title_description: "Estudante de segurança da informação e Analista de Datacenter. Busco novos desafios e também conhecer novas pessoas, pois a troca de experias enobrece o caráter do ser humano."
+#title_image: "https://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
+title_image: "https://s.gravatar.com/avatar/d9942e4b224856f821798cf7249da585?s=500&d=mm"
+google_analytics: "UA-111164692-1"
+disqus_account: xdanielribeiro
+github_repository: https://github.com/xdanielribeiro
+#ddthis_id: ra-513c6fa83da6ec67
+post_limit: 5
+
+# Social usernames/URLs
+twitter_username: danieiribeiro
+github_username:  xdanielribeiro
+instagram_username: xdanielribeiro
+#reddit_username: 
+linkedin_link: https://www.linkedin.com/in/xdanielribeiro/
+#google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
+#stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
+#xing_link:
+facebook_link: https://www.facebook.com/xDanielRibeiro
+
+# Footer
+#ooter_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/danieiribeiro\">Daniel Ribeiro</a>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: pretty
+exclude: [vendor]
