@@ -2,7 +2,7 @@
 layout: post
 title: Provisionando uma VM com o Azure PowerShell
 date: 2017-12-22 10:41:19
-categories: azure
+categories: Azure-PowerShell
 thumbnail: intazure
 tags:
   - azure

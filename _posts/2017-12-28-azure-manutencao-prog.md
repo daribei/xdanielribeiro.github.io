@@ -2,7 +2,7 @@
 layout: post
 title: Manutenção Programada no Azure - Fique Atento
 date: 2017-12-28 13:30:19
-categories: azure
+categories: Azure
 thumbnail: intazure
 tags:
   - azure
