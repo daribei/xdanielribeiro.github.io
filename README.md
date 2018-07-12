@@ -1,56 +1,62 @@
-# Carte Noire
+# Icarus
 
-A simple Jekyll theme for blogging. Not named after the coffee.
+### The blog theme you may fall in love with, coming to Hexo. [Preview](http://ppoffice.github.io/hexo-theme-icarus/)
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/preview.png "")
 
-![Homepage](http://i.imgur.com/xlmHArV.png)
+#### [View Documentation](https://github.com/ppoffice/hexo-theme-icarus/wiki)
+:star: It is strongly recommended that you read the docs before using Icarus.
 
-### Article
-![Article](http://i.imgur.com/8rD8FfC.png)
+## Features
 
-### Disqus Comments
-![Comments](http://i.imgur.com/TBZHQwF.png)
+### Profile Sidebar
 
-### Posts grouped by year
-![All Posts](http://i.imgur.com/9bNs2Sc.png)
+A nice place to show yourself. You can add your own information in your site's `_config.yml`
 
-### JavaScript Search
-![Search](http://i.imgur.com/yQqMeSl.png)
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/profile.png "")
 
-### Menu by mmenu
-![Menu](http://i.imgur.com/SClrNSH.png)
+### Self-hosted Insite Search Engine
+With the help of [Insight Search](https://github.com/ppoffice/hexo-theme-icarus/wiki/Search#insight-search), you can search anything inside your site without any third-party plugin.
 
-## Contact
-If you wish to contact me regarding this theme please raise an issue on GitHub,
-tweet me [@_jacobtomlinson](http://www.twitter.com/_jacobtomlinson) or email me
-[jacob@jacobtomlinson.co.uk](mailto:jacob@jacobtomlinson.co.uk).
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/insight-search.png "")
 
-## Contribution
-Pull requests are very welcome.
+### Custom Comment Services
+Icarus supports several comment services, give you better choices to communicate with your readers.
 
-## Theme
-This jekyll theme has been created from scratch. Ideas and inspiration are taken
-from other places but the code is my own.
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/custom-comments.png "")
 
-## Tools and Libraries
-The following tools and libraries are used in this theme
+### Post Banner & Thumbnail
 
-### JavaScript
- * [jQuery](http://jquery.com/)
- * [MMenu](http://mmenu.frebsite.nl/)
- * [HighlightJS](https://highlightjs.org/)
- * [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+Thanks to [atika](https://github.com/atika), you can now [add thumbnails or banners](https://github.com/ppoffice/hexo-theme-icarus/wiki/Theme#thumbnail) to every post to create better reading experience.
 
-### CSS
- * [Bootstrap](http://getbootstrap.com/)
- * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+### Responsive Layout
 
-### Social
- * [AddThis](http://www.addthis.com/)
- * [Disqus](https://disqus.com/)
+Icarus knows on what screen size you are browsering the website, and reorganize the layout to fit your device.
 
-### Other
- * [Real Favicon Generator](http://realfavicongenerator.net/)
- * [Google Analytics](http://www.google.com/analytics/)
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/responsive.jpg "")
 
-## License
-The jekyll theme, HTML, CSS and JavaScript is licensed under GPLv3 (unless stated otherwise in the file).
+### Custom Categories & Tags Pages
+
+Get your categories and tags listed in single pages to make your blog more methodic.
+
+### lightgallery
+
+Icarus uses [lightgallery.js](https://sachinchoolur.github.io/lightgallery.js/) to showcase your photos. Just enable it in your configuration, and that's all!
+
+![](http://ppoffice.github.io/hexo-theme-icarus/gallery/lightgallery.jpg "")
+
+### Justified Gallery
+
+You can also use [justifiedgallery.js](http://miromannino.github.io/Justified-Gallery/) to display a photo grid within your posts. Just enable it in your configuration, and place your photos in a div with the class .justified-gallery
+
+### Sidebar
+
+Icarus provides 6 built-in widgets:
+
+- recent_posts
+- category
+- archives
+- tag
+- tagcloud
+- links
+
+All of them are enabled by default. You can edit them in `widget` setting.
