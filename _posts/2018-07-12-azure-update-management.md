@@ -9,7 +9,7 @@ tags:
 published: true
 ---
 
-## Introdução-7
+## Introdução-8
 
 O objetivo desse artigo é explicar e demonstrar o funcionamento do Azure Update Management, também conhecido como Gerenciador de Atualizações. Esse recurso nos faz lembrar do _Windows Server Update Services_ (WSUS), porém com algumas diferenças importantes que veremos na sequência.
 
