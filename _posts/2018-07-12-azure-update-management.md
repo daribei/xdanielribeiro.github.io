@@ -2,7 +2,7 @@
 layout: post
 title: Adotando a solução de gerenciamento de atualizações para VMs Azure e non-Azure
 date: 2018-07-12 13:30:19
-categories: Azure - Update Management
+categories: Azure-UpdateManagement
 thumbnail: intazure
 tags:
   - azure
