@@ -531,12 +531,12 @@ ul {
 		}
 
 		.thumb {
-			margin-top: 20px;
+			margin-top: 10px;
 			margin-bottom: 0px;
 			text-align: center;
 
 			img {
-				height: 50px;
+				height: 10px;
 				@media (min-width: $screen-sm-min) {
 					height: 70px;
 				}
@@ -544,39 +544,39 @@ ul {
 		}
 
 		.author {
-			font-size: 20px;
+			font-size: 10px;
 			text-align: center;
 			margin-bottom: 0px;
 		}
 
 		.read-time {
-			font-size: 16px;
+			font-size: 10px;
 			text-align: center;
 			margin-bottom: 10px;
 			font-weight: 200;
 			@media (min-width: $screen-sm-min) {
-				margin-bottom: 40px;
+				margin-bottom: 10px;
 			}
 		}
 
 		.content {
-			font-size: 14px;
+			font-size: 10px;
 			line-height: 170%;
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
 			padding-top: 10px;
 			padding-bottom: 10px;
 
 			@media (min-width: $screen-sm-min) {
-				font-size: 24px;
-				padding-left: 30px;
-				padding-right: 30px;
-				padding-top: 40px;
-				padding-bottom: 20px;
+				font-size: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 10px;
+				padding-bottom: 10px;
 			}
 
 			.series {
-				margin-bottom: 50px;
+				margin-bottom: 10px;
 			}
 
 			img {
@@ -625,7 +625,7 @@ ul {
 			    position: absolute;
 			    top: 15px;
 			    left: 15px;
-			    font-size: 65px;
+			    font-size: 10px;
 			    font-weight: bold;
 				}
 
