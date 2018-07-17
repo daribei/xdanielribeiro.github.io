@@ -364,7 +364,7 @@ ul {
 	.menu {
 		margin-top: 250px;
 		margin-bottom: 20px;
-		font-size: 20px;
+		font-size: 10px;
 		position: absolute;
 		bottom: 0px;
 
@@ -377,11 +377,11 @@ ul {
 		}
 
 		ul {
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 			padding-left: 10px;
 
 			ul {
-				padding-left: 50px;
+				padding-left: 10px;
 				list-style: none;
 				margin-left: 0;
 				text-indent: -0.6em;
@@ -452,18 +452,18 @@ ul {
 	}
 
 	h2 {
-		font-size: 36px;
+		font-size: 10px;
 	}
 
 	h3 {
-		font-size: 28px;
+		font-size: 10px;
 	}
 
 	p {
 		margin-bottom: 10px;
 
 		@media (min-width: $screen-sm-min) {
-			margin-bottom: 40px;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -480,11 +480,11 @@ ul {
 		}
 
 		h4 {
-			margin-top: 20px;
+			margin-top: 10px;
 		}
 
 		.share {
-			margin-top: 20px;
+			margin-top: 10px;
 
 			h4 {
 				margin-bottom: 10px;
@@ -493,7 +493,7 @@ ul {
 
 		.home {
 			margin-top: 10px;
-			font-size: 16px;
+			font-size: 10px;
 
 			a {
 				color: $white;
