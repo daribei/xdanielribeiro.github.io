@@ -448,22 +448,22 @@ ul {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Montserrat', sans-serif;
-		margin-bottom: 70px;
+		margin-bottom: 10px;
 	}
 
 	h2 {
-		font-size: 70px;
+		font-size: 36px;
 	}
 
 	h3 {
-		font-size: 70px;
+		font-size: 28px;
 	}
 
 	p {
-		margin-bottom: 70px;
+		margin-bottom: 10px;
 
 		@media (min-width: $screen-sm-min) {
-			margin-bottom: 10px;
+			margin-bottom: 40px;
 		}
 	}
 
