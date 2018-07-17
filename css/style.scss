@@ -302,12 +302,12 @@ ul {
 
 	.articles {
 		text-align: center;
-		font-size: 10px;
+		font-size: 20px;
 
 		h2 {
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 			color: $light-blue;
-			font-size: 10px;
+			font-size: 26px;
 		}
 
 		ul {
@@ -315,15 +315,15 @@ ul {
 			padding: 0px;
 
 			li {
-				margin-bottom: 10px;
-				font-size: 10px;
+				margin-bottom: 20px;
+				font-size: 24px;
 
 				a:hover {
 					color: $light-medium;
 				}
 
 				small {
-					font-size: 10px;
+					font-size: 14px;
 					margin-top: -10px;
 					padding-top: 0px;
 					color: $light-medium;
@@ -334,7 +334,7 @@ ul {
 			li:nth-last-of-type(1) {
 
 				small {
-					font-size: 10px;
+					font-size: 16px;
 				}
 
 			}
@@ -364,7 +364,7 @@ ul {
 	.menu {
 		margin-top: 250px;
 		margin-bottom: 20px;
-		font-size: 10px;
+		font-size: 20px;
 		position: absolute;
 		bottom: 0px;
 
@@ -377,11 +377,11 @@ ul {
 		}
 
 		ul {
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 			padding-left: 10px;
 
 			ul {
-				padding-left: 10px;
+				padding-left: 50px;
 				list-style: none;
 				margin-left: 0;
 				text-indent: -0.6em;
@@ -480,11 +480,11 @@ ul {
 		}
 
 		h4 {
-			margin-top: 10px;
+			margin-top: 20px;
 		}
 
 		.share {
-			margin-top: 10px;
+			margin-top: 20px;
 
 			h4 {
 				margin-bottom: 10px;
@@ -493,7 +493,7 @@ ul {
 
 		.home {
 			margin-top: 10px;
-			font-size: 10px;
+			font-size: 16px;
 
 			a {
 				color: $white;
@@ -531,12 +531,12 @@ ul {
 		}
 
 		.thumb {
-			margin-top: 10px;
+			margin-top: 20px;
 			margin-bottom: 0px;
 			text-align: center;
 
 			img {
-				height: 10px;
+				height: 50px;
 				@media (min-width: $screen-sm-min) {
 					height: 70px;
 				}
@@ -544,39 +544,39 @@ ul {
 		}
 
 		.author {
-			font-size: 10px;
+			font-size: 20px;
 			text-align: center;
 			margin-bottom: 0px;
 		}
 
 		.read-time {
-			font-size: 10px;
+			font-size: 16px;
 			text-align: center;
 			margin-bottom: 10px;
-			font-weight: 200;
+			font-weight: 400;
 			@media (min-width: $screen-sm-min) {
-				margin-bottom: 10px;
+				margin-bottom: 40px;
 			}
 		}
 
 		.content {
-			font-size: 10px;
+			font-size: 18px;
 			line-height: 170%;
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: 15px;
+			padding-right: 15px;
 			padding-top: 10px;
 			padding-bottom: 10px;
 
 			@media (min-width: $screen-sm-min) {
 				font-size: 15px;
-				padding-left: 10px;
-				padding-right: 10px;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-top: 40px;
+				padding-bottom: 20px;
 			}
 
 			.series {
-				margin-bottom: 10px;
+				margin-bottom: 50px;
 			}
 
 			img {
@@ -625,7 +625,7 @@ ul {
 			    position: absolute;
 			    top: 15px;
 			    left: 15px;
-			    font-size: 90px;
+			    font-size: 65px;
 			    font-weight: bold;
 				}
 
