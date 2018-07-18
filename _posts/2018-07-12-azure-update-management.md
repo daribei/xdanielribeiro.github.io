@@ -6,7 +6,7 @@ categories: Azure-UpdateManagement
 thumbnail: intazure
 tags:
   - azure
-published: true
+published: false
 ---
 
 ## Introdução
