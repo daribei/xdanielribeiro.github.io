@@ -21,7 +21,7 @@ Precisamos de apenas dois recursos para possibilitar a implementação do Update
 
 Antes de habilitar o Update Management, é importante entender como funciona os componentes necessários para essa solução.
 
-Basicamente, o Log Analytics armazena dados coletados em um _workspace_ (espaço de trabalho) e a conta de automação nos permite gerenciar as atualizações, além de diversos outros processos.
+Basicamente, o Log Analytics armazena os dados coletados em um _workspace_ (espaço de trabalho) e a conta de automação nos permite gerenciar as atualizações, além de diversos outros processos.
 
 ## Quais são os custos relacionados com o Update Management?
 
