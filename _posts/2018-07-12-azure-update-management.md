@@ -181,7 +181,7 @@ Para visualizar o status das atualizações, clique em _Update deployments_, con
 
 ![UpdateDeployment](https://i.imgur.com/vmRA93Y.jpg)
 
-Se a instalação estiver em andamento, o status será _In progress_ e se a instalação estiver concluído com sucesso, o status será alterado para _Succeeded_. Se algum update falhar, o status será _Partially failed_.
+Se a instalação estiver em andamento, o status será _In progress_ e se a instalação estiver concluída com sucesso, o status será alterado para _Succeeded_. Se algum update falhar, o status será _Partially failed_.
 
 Para obter mais detalhes em relação as atualizações que foram instaladas ou que falharam, basta clicar no nome do agendamento, neste caso, "Weekly Update Deployment". Ao clicar, será aberto um novo painél, com diversas informações relevantes.
 
