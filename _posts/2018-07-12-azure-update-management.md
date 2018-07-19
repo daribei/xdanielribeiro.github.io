@@ -137,7 +137,7 @@ Depois de habilitado, a VM será exibida no Update Management. Vejam na imagem a
 
 Atualmente existem 3 status possíveis:
 
-* _Compliant_: servidores com todas as atualizações críticas ou de segurança'
+* _Compliant_: servidores com todas as atualizações críticas ou de segurança;
 * _Non-compliant_: servidores que não têm pelo menos uma atualização crítica ou de segurança;
 * _Not assessed_: o agente não reportou os dados com o grau de atualização do servidor.
 
