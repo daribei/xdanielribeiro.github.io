@@ -92,7 +92,7 @@ Bom, vamos ao que interessa.
 * Forneça um nome para a nova conta de automação;
 * Selecione uma Assinatura;
 * Crie um novo grupo de recursos ou utilize um existente;
-* Selecione uma região disponível;
+* Selecione uma região disponível.
 
 Conforme visto no tópico anterior, atualmente o Log Analytics não está disponível no Brasil, mas a conta de automação sim, porém, para que o Update Manamgement funcione corretamente, a conta de automação e o _workspace_ devem estar na mesma região.
 
