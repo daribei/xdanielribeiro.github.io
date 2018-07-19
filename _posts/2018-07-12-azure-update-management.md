@@ -6,7 +6,7 @@ categories: Azure-UpdateManagement
 thumbnail: intazure
 tags:
   - azure
-published: false
+published: true
 ---
 
 ## Introdução
@@ -100,3 +100,105 @@ Conforme visto no tópico anterior, atualmente o Log Analytics não está dispon
 
 3 - Depois de fornecer as informações necessárias no painel, clique em criar.
 
+### Habilitando o Update Management
+
+Depois de criar o _workspace_ e a conta de automação, já estamos aptos a habilitar o Update Management.
+
+1 - No portal do Azure, abra a conta de Automação recém criada e selecione Update Management ou Gerenciamento de Atualizações, se estiver em português;
+
+2 - Selecione opções para os seguintes itens:
+
+* Selecione uma localização. Note que neste caso, a localização será definida de acordo com a região em que foi criado a conta de automação;
+* Selecione uma Assinatura;
+* Selecione o _workspace_ do Log Analytics criado anteriormente;
+* Selecione a conta de automação que estará conectada ao _workspace_ selecionado na opção anterior.
+
+![EnablingUpdateManagement](https://i.imgur.com/2VjlLQR.jpg)
+
+Assim que concluído essa etapa, já podemos adicionar VMs no Update Management.
+
+### Adicionando VMs no Update Management
+
+1 - No portal do Azure, abra a conta de Automação e selecione Update Management ou Gerenciamento de Atualizações, se estiver em português;
+
+2 - Selecione _Add Azure VMs_;
+
+![AddAzureVMs](https://i.imgur.com/xFK76XB.jpg)
+
+3 - Selecione a região onde suas VMs encontram-se, o Grupo de Recursos e selecione as VMs que você deseja habilitar o Update Management;
+
+![AddAzureVMsUM](https://i.imgur.com/9Ut5J11.jpg)
+
+4 - Feito isso, automaticamente será feito a instalação do _Microsoft Monitoring Agent_ na VM e após alguns minutos/horas, as informações serão exibidas no Update Management.
+
+Depois de habilitado, a VM será exibida no Update Management. Vejam na imagem abaixo que o status atual da VM é _Compliant_. 
+
+![UM-VM_Compliant](https://i.imgur.com/FuJSRXg.jpg)
+
+Atualmente existem 3 status possíveis:
+
+* _Compliant_: servidores com todas as atualizações críticas ou de segurança'
+* _Non-compliant_: servidores que não têm pelo menos uma atualização crítica ou de segurança;
+* _Not assessed_: o agente não reportou os dados com o grau de atualização do servidor.
+
+### Configurando o agendamento das atualizações
+
+Ainda não existe a possibilidade de aplicar as atualizações imediatamente, ou seja, clicar num "botão" que irá iniciar a instalação das atualizações, porém, acredito que em um futuro próximo essa funcionalidade estará disponível.
+
+Por enquanto, a única forma de aplicar as atualizações é através do agendamento. 
+
+Para agendar uma instalação de atualizações para os servidores, clique em  _Scheduled update deployments_, conforme imagem a seguir.
+
+![ScheduleUpdates](https://i.imgur.com/al5VLhq.jpg)
+
+No painel, insira as seguintes informações:
+
+* Nome: insira um nome exclusivo para identificar a implantação de atualizações;
+* Sistema operacional: selecione Windows ou Linux;
+* Machines to update (Computadores a atualizar): selecione as máquinas virtuais que você deseja atualizar;
+* Update Classifications (Classificação das atualizações): selecione o tipo de atualização que você quer incluir. Os tipos de classificação são:
+
+  + Critical updates
+  + Security updates
+  + Update rollups
+  + Feature packs
+  + Service packs
+  + Definition updates
+  + Tools
+  + Updates
+
+* Updates to exclude (Atualizações a serem excluídas): caso selecionada, insira o número do KB;
+
+* Schedule settings: especifique o agendamente para as atualizações;
+
+* Maintenance Window (Janela de Manutenção): especifique o tempo em que você deseja que a instalação das atualizações ocorra. Importante ressaltar que, caso a atualização necessite de um _restart_, a VM será reiniciada automaticamente.
+
+![NewUpdateSchedule](https://i.imgur.com/7k5bL4g.jpg)
+
+### Visualizando os resultados da instalação
+
+Para visualizar o status das atualizações, clique em _Update deployments_, conforme imagem abaixo.
+
+![UpdateDeployment](https://i.imgur.com/vmRA93Y.jpg)
+
+Se a instalação estiver em andamento, o status será _In progress_ e se a instalação estiver concluído com sucesso, o status será alterado para _Succeeded_. Se algum update falhar, o status será _Partially failed_.
+
+Para obter mais detalhes em relação as atualizações que foram instaladas ou que falharam, basta clicar no nome do agendamento, neste caso, "Weekly Update Deployment". Ao clicar, será aberto um novo painél, com diversas informações relevantes.
+
+![UpdateInformation](https://i.imgur.com/O9xIyYm.jpg)
+
+## Conclusão
+
+Acredito que na maioria dos cenários rodando no Azure, o Update Management certamente substituirá o WSUS. 
+
+Espero ter te ajudado a entender como funciona o Azure Update Management.
+
+Para mais informações acesse: 
+
+[Update Management overview](https://docs.microsoft.com/en-us/azure/automation/automation-update-management)
+
+[Manage updates for multiple machines](https://docs.microsoft.com/en-us/azure/automation/manage-update-multi)
+
+Obrigado,
+
+### Daniel Ribeiro.
