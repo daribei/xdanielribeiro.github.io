@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Adotando a solução de gerenciamento de atualizações para VMs Azure e non-Azure
+title: Adotando a solução do Updamente Management para VMs Azure e non-Azure
 date: 2018-07-12 13:30:19
 categories: Azure-UpdateManagement
 thumbnail: intazure
 tags:
   - azure
   - updatemanagement
+  - wsusasaservice
 published: true
 ---
 
@@ -190,9 +191,9 @@ Para obter mais detalhes em relação as atualizações que foram instaladas ou 
 
 ## Conclusão
 
-Acredito que na maioria dos cenários rodando no Azure, o Update Management certamente substituirá o WSUS. 
+Acredito que na maioria dos cenários rodando no Azure, o Update Management certamente substituirá o WSUS.
 
-Espero ter te ajudado a entender como funciona o Azure Update Management.
+Espero ter te ajudado a entender o funcionamento do Azure Update Management.
 
 Para mais informações acesse: 
 
