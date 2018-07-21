@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adotando a solução do Updamente Management para VMs Azure e non-Azure
+title: Adotando a solução do Update Management para VMs Azure e non-Azure
 date: 2018-07-12 13:30:19
 categories: Azure-UpdateManagement
 thumbnail: intazure
