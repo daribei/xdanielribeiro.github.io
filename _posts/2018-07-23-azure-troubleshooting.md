@@ -7,7 +7,7 @@ thumbnail: intazure
 tags:
   - azure
   - troubleshooting
-published: false
+published: true
 ---
 
 ## Introdução
