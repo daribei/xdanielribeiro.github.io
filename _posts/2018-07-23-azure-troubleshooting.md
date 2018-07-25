@@ -12,9 +12,9 @@ published: true
 
 ## Introdução
 
-Ultimamente a Microsoft melhorou e muito a capacidade de diagnosticar e resolver problemas de VMs Windows e Linux no Azure. Isso era algo muito esperado, até porque, nós como clientes, não temos acesso ao backend, isto é, a infraestrutura onde os _workloads_ são executados.
+Ultimamente a Microsoft melhorou e muito a capacidade de diagnosticar e resolver problemas de VMs Windows e Linux no Azure. Isso era algo muito esperado, até porque, nós como clientes, não temos acesso a  infraestrutura onde os _workloads_ são executados.
 
-Se você ainda não precisou fazer um troubleshooting em alguma VM no Azure, pode ter certeza que mais cedo ou mais tarde vai precisar, e não é porque a plataforma tem algum tipo de problema recorrente, mas sim, porque isso acontece, rs.
+Se você ainda não precisou fazer um troubleshooting em alguma VM no Azure, pode ter certeza que mais cedo ou mais tarde vai precisar. Não que a plataforma provoque algum tipo de  problema recorrente, mas sim por que invariavelmente uma hora algo não vai sair como deveria.
 
 O Azure possui diversas formas de diagnosticar e resolver problemas. Vou explicar as principais delas e tenho certeza que serão bastante úteis durante o troubleshooting.
 
@@ -173,7 +173,7 @@ Neste artigo, eu citei os principais, porém, não se limita a isso.
 
 Se esse conteúdo fez sentido pra você, escreve nos comentários pra mim saber se estou te ajudando de alguma forma.
 
-Para mais informações acesse: 
+## Referências
 
 [How to use boot diagnostics to troubleshoot virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/boot-diagnostics)
 

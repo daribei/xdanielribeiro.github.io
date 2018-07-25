@@ -195,7 +195,7 @@ Acredito que na maioria dos cenários rodando no Azure, o Update Management cert
 
 Espero ter te ajudado a entender o funcionamento do Azure Update Management.
 
-Para mais informações acesse: 
+## Referências 
 
 [Update Management overview](https://docs.microsoft.com/en-us/azure/automation/automation-update-management)
 
