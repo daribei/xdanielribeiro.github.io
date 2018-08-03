@@ -32,11 +32,7 @@ Além da camada _free_, existe também a camada _standard_, que oferece uma sér
 
 O primeiro passo é de fato acessar o ASC.
 
-Para isso, acesse o portal do Azure e clique em Azure Security Center no painel lateral, de acordo com a imagem abaixo.
-
-![ASC](https://i.imgur.com/Wbt8X6t.jpg)
-
-Caso ele não apareça na barra lateral, basta utilizar o campo de pesquisa.
+Para isso, acesse o portal do Azure e clique em Azure Security Center no painel lateral. Caso ele não apareça na barra lateral, basta utilizar o campo de pesquisa.
 
 Durante o primeiro acesso, talvez o ASC demore alguns minutos até popular o dashboard com recursos, recomendações e demais informações.
 
