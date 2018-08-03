@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primeiros passos para manter seus workloads seguros com o Azure Security Center
+title: Como manter seus workloads seguros com o Azure Security Center
 date: 2018-08-03 11:20:00
 categories: Azure-Security-Center
 thumbnail: intazure
@@ -16,7 +16,7 @@ Diante dos incidentes que aconteceram nos últimos anos, é perceptível que fin
 
 No ano de 2017, o mundo foi surpreendido com um _malware_ chamado WannaCry. Esse _malware_ causou um prejuízo de milhares de dólares, e tudo isso poderia ter sido evitado com uma simples atualização do Windows.
 
-Isso evidência a necessidade de termos uma rotina de [atualização](http://xdanielribeiro.com.br/azure-updatemanagement/2018/07/12/azure-update-management/) dos nossos workloads, seja no ambiente local ou na nuvem. 
+Isso evidencia a necessidade de termos uma rotina de [atualização](http://xdanielribeiro.com.br/azure-updatemanagement/2018/07/12/azure-update-management/) dos nossos workloads, seja no ambiente local ou na nuvem. 
 
 Dentro do contexto de segurança da informação, a Microsoft é o __único__ provedor de nuvem que oferece um recurso que possibilita ter visibiidade e controle sobre a segurança dos nossos workloads.
 
