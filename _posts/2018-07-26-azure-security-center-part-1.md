@@ -24,7 +24,7 @@ O objetivo desse artigo é explicar alguns conceitos fundamentais para dar os pr
 
 ## __Overview do Azure Security Center__
 
-O Azure Security Center (ASC) é um recurso disponível no Azure para toda e qualquer assinatura ativa. Ou seja, tendo um assinatura do Azure, automaticamente é habilitado o ASC na camada _free_.
+O Azure Security Center (ASC) é um recurso disponível no Azure para toda e qualquer assinatura ativa. Ou seja, tendo um assinatura, automaticamente é habilitado o ASC na camada _free_.
 
 Além da camada _free_, existe também a camada _standard_, que oferece uma série de mecanismos de segurança para organizações que precisam de mais controle. Falaremos mais sobre essa camada nos próximos artigos.
 
@@ -54,11 +54,11 @@ Conforme imagem acima, o dashboard do ASC fornece informações relacionadas a 3
 
 Recentemente o ASC teve uma grande atualização no que diz respeito as Security Policies. Agora está mais organizado e mais fácil de entender o que significa cada um dos componentes, mas mesmo assim, ainda gera um pouco de confusão.
 
-Basicamente, as políticas de segurança do ASC __são o que definem como o ASC irá se comportar diante dos workloads__.
+Basicamente, as políticas de segurança __são o que definem como o ASC irá se comportar diante dos workloads__.
 
 Atualmente as políticas de segurança do ASC possuem 4 componentes, veremos cada um deles na sequência.
 
-### __Data Collection__
+### Data Collection
 
 A coleta dos dados das suas VMs Azure e non-Azure são realizados pelo Microsoft Monitoring Agent (MMA), cujo qual, armazena os dados coletados em um _workspace_ do Log Analytics.
 
@@ -76,7 +76,7 @@ Para habilitar o provisionamento automático do Microsoft Monitoring Agent:
 
 ![ASC-DC2](https://i.imgur.com/30DC65p.jpg)
 
-### __Security policy__
+### Security policy
 
 Talvez o componente que mais gere confusão é o __Security policy__. Quando abrimos o ASC e selecionamos __Security policy__, uma nova blade chamada __Policy Management__ será aberta, conforme imagem abaixo.
 
@@ -90,7 +90,7 @@ Quando você configura as políticas aqui, seja uma política de _Compute and Ap
 
 Caso você queira entender a função de cada uma das políticas, veja o link nas referências.
 
-### __Email notifications__
+### Email notifications
 
 Neste componente, você deve informar os e-mails de contato e um telefone para receber notificações de segurança enviadas pelo ASC.
 
@@ -114,7 +114,7 @@ A imagem abaixo exemplifica esse processo.
 
 ![ASC-Email_Notifications](https://i.imgur.com/FeefbX9.jpg)
 
-### __Pricing tier__
+### Pricing tier
 
 O ASC oferece duas camadas de preço:
 
