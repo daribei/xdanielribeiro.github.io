@@ -28,9 +28,7 @@ O Azure Security Center (ASC) é um recurso disponível no Azure para toda e qua
 
 Além da camada _free_, existe também a camada _standard_, que oferece uma série de mecanismos de segurança para organizações que precisam de mais controle. Falaremos mais sobre essa camada nos próximos artigos.
 
-O primeiro passo é de fato acessar o ASC.
-
-Para isso, acesse o portal do Azure e clique em Azure Security Center no painel lateral. Caso ele não apareça na barra lateral, basta utilizar o campo de pesquisa.
+O primeiro passo é acessar o ASC, para isso, clique em Azure Security Center no painel lateral. Caso ele não apareça, basta utilizar o campo de pesquisa.
 
 Durante o primeiro acesso, talvez o ASC demore alguns minutos até popular o dashboard com recursos, recomendações e demais informações.
 
