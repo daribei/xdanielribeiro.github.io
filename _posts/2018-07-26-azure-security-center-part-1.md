@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Primeiros passos para manter seus workloads seguros com o Azure Security Center
-date: 2018-07-31 10:31:00
+date: 2018-08-03 11:20:00
 categories: Azure-Security-Center
 thumbnail: intazure
 tags:
