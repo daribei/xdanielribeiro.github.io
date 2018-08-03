@@ -118,7 +118,7 @@ A imagem abaixo exemplifica esse processo.
 
 O ASC oferece duas camadas de preço:
 
-- __Free__: conforme explicado anteriormente, essa camada é habilitada automaticamente para todas as assinaturas do Azure, fornecendo políticas de segurança e recomendações de segurança para ajudar a proteger seus workloads.
+- __Free__: conforme explicado anteriormente, essa camada é habilitada automaticamente para todas as assinaturas do Azure, fornecendo políticas de segurança e recomendações para ajudar a proteger seus workloads.
 
 - __Standard__: a camada standard estende os recursos da camada free para workloads em execução fora do Azure, ou seja, no seu ambiente on-premises ou em outros provedores de nuvem. Um dos principais beneficios é o gerenciamento unificado de todos os seus workloads. A camada standard também oferece recursos avançados de detecção de ameaças, que utilizam recursos de análise comportamental e machine learning para identificar ataques e zero-day exploits. Importante ressaltar que a camada standard é gratuita por 60 dias. Depois dos 60 dias, o custo é de U$ 15 por nó.
 
@@ -139,7 +139,7 @@ A Microsoft recomenda que no primeiro momento, todas as recomendações de alta 
 Atualmente, as recomendações são divididas em 3 grupos:
 
 - __Compute & apps__: as recomendações de computação são para VMs Azure e non-Azure e incluem diversos tipos de recomendações, por isso, é importante entender a [lista](https://docs.microsoft.com/en-us/azure/security-center/security-center-recommendations#what-are-security-recommendations) completa de recomendações que podem ser aplicadas nos workloads. As recomendações de Aplicativos são voltadas para workloads que possuem aplicações web rodando em máquinas virtuais no Azure.
-Na maioria dos casos, a Microsoft vai recomendar que você tenha um Web Application Firewall (WAF). Veja na imagem abaixo algumas recomendações do grupo _Compute & apps_.
+Na maioria dos casos, a Microsoft vai recomendar que você utilize um Web Application Firewall (WAF). Veja na imagem abaixo algumas recomendações do grupo _Compute & apps_.
 
 ![ASC-Compute_and_Apps](https://i.imgur.com/oZCcpWK.jpg)
 
@@ -149,10 +149,10 @@ Na maioria dos casos, a Microsoft vai recomendar que você tenha um Web Applicat
 - Configurar regras no NSG para restringir o acesso aos seus recursos a partir da internet;
 - Adicionar um NGFW no ambiente.
 
-As recomendações podem variar dependendo do ambiente, por isso, novamente, é extremamente imporatnte que você entenda a lista completa de recomendações.
+As recomendações podem variar dependendo do ambiente, por isso, novamente, é extremamente importante que você entenda a lista completa de recomendações.
 
 - __Data & storage__: As recomendações de Dados são voltadas para contas de armazenamento e Azure SQL.
-Aqui você verá recomendações para criptografar contas de armazenamento (hoje é criptografada por padrão), habilitar auditoria nas suas bases de dados e assim por diante. Deixarei o link nas referências com a lista completa de recomendações
+Aqui você verá recomendações para criptografar contas de armazenamento (hoje as contas de armazenamento são criptografadas por padrão), habilitar auditoria nas suas bases de dados e assim por diante. Deixarei o link nas referências com a lista completa de recomendações
 
 ## __Conclusão__
 
