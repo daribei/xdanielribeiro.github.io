@@ -7,7 +7,7 @@ thumbnail: intazure
 tags:
   - azure
   - security
-published: true
+published: false
 ---
 
 ## __Introdução__
