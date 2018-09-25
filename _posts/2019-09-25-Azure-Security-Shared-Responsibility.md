@@ -17,7 +17,7 @@ A maioria das organizações quando movem seus _workloads_ para nuvem, acreditam
 Uma pesquisa recente realizada pelo Gartner, afirma que a segurança em nuvem é uma responsabilidade compartilhada entre o cliente e o provedor de nuvem (CSP). A figura 1 ilustra os diferentes modelos de computação em nuvem e, principalmente, as camadas que são de responsabilidade do cliente e do CSP. Importante ressaltar que, “_People_” (Pessoas) no diagrama, refere-se a usuários autorizados pelo cliente, e não aos funcionários do provedor de nuvem.
 
 ![Security_Handoff_Points](https://i.imgur.com/9rs5rnH.png)
-Fonte: Gartner (2018)
+<center>Fonte: Gartner (2018)</center>
 
 O objetivo desse artigo é explicar o funcionamento de alguns recursos do Azure que irão ajudar a manter a segurança nas camadas que são de responsabilidade do cliente.
 
