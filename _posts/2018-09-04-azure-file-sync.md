@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Porque o Azure Security Center recomenda a criptografia dos discos das VMs no Azure?
-date: 2018-07-12 13:30:19
-categories: Azure-Troubleshooting
+title: Utilizando o Azure File Sync para modernizar o File Server com baixo investimento
+title: Modernizando o File Server com os benefícios do Azure File Sync
+date: 2018-09-04 15:05:00
+categories: Azure-FileSync
 thumbnail: intazure
 tags:
   - azure
-  - asc
+  - files
 published: false
 ---
 
 ## Introdução
 
-Sempre se sonhou em ter um File Server híbrido, mas nem sempre isso foi possível, devido a problemas de link da internet. Claro que essa era uma realidade Brasileira, nos Estados Unidos, por exemplo, esse problema deixou de existir a muitos anos. 
+Sempre se sonhou em ter um file server híbrido, mas nem sempre isso foi possível, devido a problemas comunicação e latência. Claro que essa era uma realidade brasileira, nos Estados Unidos, por exemplo, esse problema deixou de existir a muitos anos.
 
-Hoje, finalmente temos diversas soluções de File Server híbrido que nos possibilitam manter a performance de um ambiente on-premises e extender a capacidade para um ambiente de nuvem. Ou seja, eu posso ter uma porcentagem dos meus dados no meu ambiente local, geralmente aqueles mais utilizados, garantindo um acesso rápido até eles e armazenando o restante dos dados em uma camada de nuvem, neste caso, o Microsoft Azure.
+Hoje, finalmente temos diversas soluções de file server híbrido que nos possibilitam manter os benefícios da nuvem, sem perder a performance no acesso aos dados. Ou seja, podemos ter uma porcentagem dos dados no ambiente local, geralmente aqueles mais utilizados, garantindo um acesso rápido até eles e armazenando o restante dos dados em uma camada de nuvem, neste caso, o Microsoft Azure.
 
 Atualmente, a Microsoft possui duas soluções que foram criadas no Azure para atender essa demanda, a primeira delas é o StorSimple e a segunda o File Sync, cada uma com suas características, porém, ambas atendem essa necessidade.
 
@@ -34,17 +35,9 @@ Basicamente é dessa forma que o Azure File Sync funciona.
 
 No próximo tópico, vamos entender os componentes dessa solução.
 
-## Componentes do Azure File Sync
+## Pontos importantes
 
-O File Sync possui alguns componentes chaves para o seu funcionamento:
-
-- Conta de Armazenamento (Files):
-
-- Sync Group: um grupo de sincronismo basicamente define um share do Azure Files que será utilizado durante a sincronização dos dados.
-
-- Endpoint / Registered Server ???: são os servidores que  
-
-- Azure Backup:
+## Backup
 
 ## Conclusão
 
