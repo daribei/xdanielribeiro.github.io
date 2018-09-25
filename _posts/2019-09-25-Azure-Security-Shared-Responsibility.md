@@ -19,7 +19,7 @@ Uma pesquisa recente realizada pelo Gartner, afirma que a segurança em nuvem é
 ![Security_Handoff_Points](https://i.imgur.com/9rs5rnH.png)
 <center>Fonte: Gartner (2018)</center>
 
-O objetivo desse artigo é explicar o funcionamento de alguns recursos do Azure que irão ajudar a manter a segurança nas camadas que são de responsabilidade do cliente.
+O objetivo desse artigo é explicar o funcionamento de alguns recursos do Azure, que irão ajudar a manter a segurança nas camadas que são de responsabilidade do cliente.
 
 ## Azure Active Directory
 
